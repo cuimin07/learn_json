@@ -14,8 +14,16 @@ json_str = json.dumps(data)
 print("python原始数据：", repr(data))
 print("json对象：", json_str)
 
+# 写入JSON数据
+with open('data.json', 'w') as f:
+    json.dump(data, f)
 
 
+# 读取json数据
+with open('data.json', 'r') as f:
+    data2 = json.load(f)
+
+print('json数据为：', data2)
 
 
 
